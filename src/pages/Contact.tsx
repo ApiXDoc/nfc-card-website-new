@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { MapPin, Send, AlertCircle } from 'lucide-react';
 import { supportService, CreateContactRequest, supportUtils } from '../services/support';
 import './Contact.css';
 
@@ -38,9 +38,10 @@ const Contact: React.FC = () => {
     }
   };
 
-  const getSetting = (key: string, defaultValue: string = '') => {
-    return siteSettings[key] || defaultValue;
-  };
+  // Helper function to get settings (for future use)
+  // const getSetting = (key: string, defaultValue: string = '') => {
+  //   return siteSettings[key] || defaultValue;
+  // };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;

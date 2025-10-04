@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Shield, Smartphone, Star, Loader } from 'lucide-react';
+import { ArrowRight, Zap, Shield, Smartphone, Loader } from 'lucide-react';
 import { Product } from '../types';
 import { productUtils } from '../services/products';
 import './Home.css';

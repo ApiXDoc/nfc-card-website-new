@@ -79,7 +79,7 @@ const Billing: React.FC = () => {
     }
     
     // Phone format validation (basic)
-    if (billingData.phone && !/^[\+]?[1-9][\d]{0,15}$/.test(billingData.phone.replace(/\D/g, ''))) {
+    if (billingData.phone && !/^[+]?[1-9][\d]{0,15}$/.test(billingData.phone.replace(/\D/g, ''))) {
       newErrors.phone = 'Please enter a valid phone number';
     }
     

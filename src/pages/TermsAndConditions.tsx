@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, FileText, AlertCircle } from 'lucide-react';
+import { FileText, AlertCircle } from 'lucide-react';
 import './TermsAndConditions.css';
 
 const TermsAndConditions: React.FC = () => {

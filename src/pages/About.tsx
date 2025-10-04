@@ -34,6 +34,8 @@ const About: React.FC = () => {
     }
   ];
 
+  // Team data for future use
+  /*
   const team = [
     {
       name: 'Sarah Johnson',
@@ -54,6 +56,7 @@ const About: React.FC = () => {
       description: 'Creative director ensuring beautiful, functional designs.'
     }
   ];
+  */
 
   return (
     <motion.div 

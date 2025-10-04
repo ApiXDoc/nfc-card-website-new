@@ -26,10 +26,10 @@ const Footer: React.FC = () => {
               share seamlessly, and make lasting impressions with Digital Zin.
             </p>
             <div className="social-links">
-              <a href="#" className="social-link"><Facebook size={20} /></a>
-              <a href="#" className="social-link"><Twitter size={20} /></a>
-              <a href="#" className="social-link"><Instagram size={20} /></a>
-              <a href="#" className="social-link"><Linkedin size={20} /></a>
+              <a href="https://facebook.com" className="social-link" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
+              <a href="https://twitter.com" className="social-link" target="_blank" rel="noopener noreferrer"><Twitter size={20} /></a>
+              <a href="https://instagram.com" className="social-link" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
+              <a href="https://linkedin.com" className="social-link" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></a>
             </div>
           </motion.div>
 
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
               <li><Link to="/terms-and-conditions">Terms & Conditions</Link></li>
               <li><Link to="/privacy-policy">Privacy Policy</Link></li>
               <li><Link to="/refund-policy">Refund Policy</Link></li>
-              <li><a href="#">FAQ</a></li>
+              <li><Link to="/contact">FAQ</Link></li>
             </ul>
           </motion.div>
 
