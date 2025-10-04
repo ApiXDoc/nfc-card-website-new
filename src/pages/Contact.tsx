@@ -23,6 +23,7 @@ const Contact: React.FC = () => {
     // fetchSiteSettings();
   }, []);
 
+  /*
   const fetchSiteSettings = async () => {
     try {
       // Temporary mock settings until general service is fixed
@@ -37,6 +38,7 @@ const Contact: React.FC = () => {
       console.error('Error fetching site settings:', err);
     }
   };
+  */
 
   // Helper function to get settings (for future use)
   // const getSetting = (key: string, defaultValue: string = '') => {
