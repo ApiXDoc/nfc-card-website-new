@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -35,7 +35,7 @@ const ProductDetail: React.FC = () => {
     }
   }, [id]);
 
-  const handlePrevImage = () => {
+  const handlePrevImage = useCallback(() => {
     setSelectedImage(prev => {
       if (!product) return prev;
       const images = product.images && product.images.length > 0 
@@ -43,9 +43,9 @@ const ProductDetail: React.FC = () => {
         : [product.primary_image || product.image].filter(Boolean);
       return prev === 0 ? images.length - 1 : prev - 1;
     });
-  };
+  }, [product]);
 
-  const handleNextImage = () => {
+  const handleNextImage = useCallback(() => {
     setSelectedImage(prev => {
       if (!product) return prev;
       const images = product.images && product.images.length > 0 
@@ -53,7 +53,7 @@ const ProductDetail: React.FC = () => {
         : [product.primary_image || product.image].filter(Boolean);
       return prev === images.length - 1 ? 0 : prev + 1;
     });
-  };
+  }, [product]);
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
     const target = e.target as HTMLImageElement;
@@ -84,7 +84,7 @@ const ProductDetail: React.FC = () => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [product, selectedImage, showImageModal]);
+  }, [product, selectedImage, showImageModal, handleNextImage, handlePrevImage]);
 
   const fetchProduct = async (productId: string) => {
     try {

@@ -17,10 +17,10 @@ const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [siteSettings, setSiteSettings] = useState<Record<string, any>>({});
+  // const [siteSettings, setSiteSettings] = useState<Record<string, any>>({});
 
   useEffect(() => {
-    fetchSiteSettings();
+    // fetchSiteSettings();
   }, []);
 
   const fetchSiteSettings = async () => {
@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
         business_hours: '9 AM - 6 PM EST',
         office_address: '123 NFC Street, Tech City, TC 12345'
       };
-      setSiteSettings(mockSettings);
+      // setSiteSettings(mockSettings);
     } catch (err) {
       console.error('Error fetching site settings:', err);
     }
